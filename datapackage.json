@@ -209,7 +209,7 @@
       "state": {
         "group": "Date",
         "series": ["Brent Spot Price"],
-        "graphType": "lines-and-points"
+        "graphType": "lines"
       }
     }
   ]
