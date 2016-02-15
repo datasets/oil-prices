@@ -1,0 +1,157 @@
+{
+  "name": "sea-level-rise",
+  "title": "Global Average Absolute Sea Level Change, 1880-2014",
+  "description": "This data contains cumulative changes in sea level for the world’s oceans since 1880, based on a combination of long-term tide gauge measurements and recent satellite measurements.",
+  "homepage": "http://www3.epa.gov/climatechange/science/indicators/oceans/sea-level.html",
+  "license": "ODC-PDDL-1.0",
+  "sources": [
+    {
+      "name": "EPA (United States Environmental Protection Agency)",
+      "web": "http://www3.epa.gov/climatechange/images/indicator_downloads/sea-level_fig-1.csv"
+    },
+    {
+      "name": "CSIRO (Commonwealth Scientific and Industrial Research Organisation)",
+      "web": "http://www.cmar.csiro.au/sealevel/GMSL_SG_2011_up.html"
+    }
+  ],
+  "resources": [
+    {
+      "name": "CSIRO_ALT_gmsl_mo_2015",
+      "path": "data/CSIRO_ALT_gmsl_mo_2015.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Time",
+            "type": "date",
+            "description": "Year and month of GMSL calculation (YYYY-MMM)"
+          },
+          {
+            "name": "GMSL",
+            "type": "number",
+            "description": "Global Mean Sea Level in mm"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CSIRO_ALT_gmsl_yr_2015",
+      "path": "data/CSIRO_ALT_gmsl_yr_2015.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Time",
+            "type": "date",
+            "description": "Year of GMSL calculation (YYYY)"
+          },
+          {
+            "name": "GMSL",
+            "type": "number",
+            "description": "Global Mean Sea Level in mm"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CSIRO_Recons_gmsl_mo_2015",
+      "path": "data/CSIRO_Recons_gmsl_mo_2015.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Time",
+            "type": "date",
+            "description": "Year and month of GMSL calculation (YYYY-MMM)"
+          },
+          {
+            "name": "GMSL",
+            "type": "number",
+            "description": "Reconstructed Global Mean Sea Level in mm"
+          },
+          {
+            "name": "uncertainty",
+            "type": "number",
+            "description": "uncertainty due to reconstruction"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CSIRO_Recons_gmsl_yr_2015",
+      "path": "data/CSIRO_Recons_gmsl_yr_2015.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Time",
+            "type": "date",
+            "description": "Year of GMSL calculation (YYYY)"
+          },
+          {
+            "name": "GMSL",
+            "type": "number",
+            "description": "Reconstructed Global Mean Sea Level in mm"
+          },
+          {
+            "name": "uncertainty",
+            "type": "number",
+            "description": "Uncertainty due to reconstruction"
+          }
+        ]
+      }
+    },
+    {
+      "name": "epa-sea-level",
+      "path": "data/epa-sea-level.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Year",
+            "type": "date",
+            "description": "Year of measurement (YYYY)"
+          },
+          {
+            "name": "CSIRO Adjusted Sea Level",
+            "type": "number",
+            "description": "Comulative changes (in inches) in sea level for the world’s oceans based on the combination of long-term tide gauge measurements and recent satellite measurements."
+          },
+          {
+            "name": "Lower error bound",
+            "type": "number",
+            "description": "inches"
+          },
+          {
+            "name": "Upper error bound",
+            "type": "number",
+            "description": "inches"
+          },
+          {
+            "name": "NOAA Adjusted Sea Level",
+            "type": "number",
+            "description": "inches"
+          }
+        ]
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "graph",
+      "label": "Graph",
+      "resourceName": "epa-sea-level",
+      "type": "Graph",
+      "state": {
+        "group": "Year",
+        "series": ["CSIRO Adjusted Sea Level", "NOAA Adjusted Sea Level"],
+        "graphType": "lines-and-points"
+      }
+    }
+  ]
+}
