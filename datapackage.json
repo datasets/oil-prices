@@ -1,141 +1,200 @@
 {
-  "name": "sea-level-rise",
-  "title": "Global Average Absolute Sea Level Change, 1880-2014",
-  "description": "This data contains cumulative changes in sea level for the world’s oceans since 1880, based on a combination of long-term tide gauge measurements and recent satellite measurements.",
-  "homepage": "http://www3.epa.gov/climatechange/science/indicators/oceans/sea-level.html",
+  "name": "oil-prices",
+  "title": "Brent and WTI Spot Prices",
+  "description": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
+  "homepage": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
   "license": "ODC-PDDL-1.0",
   "sources": [
     {
-      "name": "EPA (United States Environmental Protection Agency)",
-      "web": "http://www3.epa.gov/climatechange/images/indicator_downloads/sea-level_fig-1.csv"
+      "name": "Daily Europe Brent Spot Price",
+      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls"
     },
     {
-      "name": "CSIRO (Commonwealth Scientific and Industrial Research Organisation)",
-      "web": "http://www.cmar.csiro.au/sealevel/GMSL_SG_2011_up.html"
+      "name": "Weekly Europe Brent Spot Price",
+      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEw.xls"
+    },
+    {
+      "name": "Monthly Europe Brent Spot Price",
+      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEm.xls"
+    },
+    {
+      "name": "Annual Europe Brent Spot Price",
+      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEa.xls"
+    },
+    {
+      "name": "Daily Cushing, OK WTI Spot Price",
+      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCd.xls"
+    },
+    {
+      "name": "Weekly Cushing, OK WTI Spot Price",
+      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCw.xls"
+    },
+    {
+      "name": "Monthly Cushing, OK WTI Spot Price",
+      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCm.xls"
+    },
+    {
+      "name": "Annual Cushing, OK WTI Spot Price",
+      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCa.xls"
     }
   ],
   "resources": [
     {
-      "name": "CSIRO_ALT_gmsl_mo_2015",
-      "path": "data/CSIRO_ALT_gmsl_mo_2015.csv",
+      "name": "brent-day",
+      "path": "data/brent-day.csv",
       "format": "csv",
       "mediatype": "text/csv",
       "schema": {
         "fields": [
           {
-            "name": "Time",
+            "name": "Date",
             "type": "date",
-            "description": "Year and month of GMSL calculation (YYYY-MMM)"
+            "description": "YYYY-MM-DD"
           },
           {
-            "name": "GMSL",
+            "name": "Brent Spot Price",
             "type": "number",
-            "description": "Global Mean Sea Level in mm"
+            "description": "Europe Brent Spot Price FOB (Dollars per Barrel)"
           }
         ]
       }
     },
     {
-      "name": "CSIRO_ALT_gmsl_yr_2015",
-      "path": "data/CSIRO_ALT_gmsl_yr_2015.csv",
+      "name": "brent-week",
+      "path": "data/brent-week.csv",
       "format": "csv",
       "mediatype": "text/csv",
       "schema": {
         "fields": [
           {
-            "name": "Time",
+            "name": "Date",
             "type": "date",
-            "description": "Year of GMSL calculation (YYYY)"
+            "description": "YYYY-MM-DD"
           },
           {
-            "name": "GMSL",
+            "name": "Brent Spot Price",
             "type": "number",
-            "description": "Global Mean Sea Level in mm"
+            "description": "Europe Brent Spot Price FOB (Dollars per Barrel)"
           }
         ]
       }
     },
     {
-      "name": "CSIRO_Recons_gmsl_mo_2015",
-      "path": "data/CSIRO_Recons_gmsl_mo_2015.csv",
+      "name": "brent-month",
+      "path": "data/brent-month.csv",
       "format": "csv",
       "mediatype": "text/csv",
       "schema": {
         "fields": [
           {
-            "name": "Time",
+            "name": "Date",
             "type": "date",
-            "description": "Year and month of GMSL calculation (YYYY-MMM)"
+            "description": "YYYY-MM"
           },
           {
-            "name": "GMSL",
+            "name": "Brent Spot Price",
             "type": "number",
-            "description": "Reconstructed Global Mean Sea Level in mm"
-          },
-          {
-            "name": "uncertainty",
-            "type": "number",
-            "description": "uncertainty due to reconstruction"
+            "description": "Europe Brent Spot Price FOB (Dollars per Barrel)"
           }
         ]
       }
     },
     {
-      "name": "CSIRO_Recons_gmsl_yr_2015",
-      "path": "data/CSIRO_Recons_gmsl_yr_2015.csv",
+      "name": "brent-year",
+      "path": "data/brent-year.csv",
       "format": "csv",
       "mediatype": "text/csv",
       "schema": {
         "fields": [
           {
-            "name": "Time",
+            "name": "Date",
             "type": "date",
-            "description": "Year of GMSL calculation (YYYY)"
+            "description": "YYYY"
           },
           {
-            "name": "GMSL",
+            "name": "Brent Spot Price",
             "type": "number",
-            "description": "Reconstructed Global Mean Sea Level in mm"
-          },
-          {
-            "name": "uncertainty",
-            "type": "number",
-            "description": "Uncertainty due to reconstruction"
+            "description": "Europe Brent Spot Price FOB (Dollars per Barrel)"
           }
         ]
       }
     },
     {
-      "name": "epa-sea-level",
-      "path": "data/epa-sea-level.csv",
+      "name": "wti-day",
+      "path": "data/wti-day.csv",
       "format": "csv",
       "mediatype": "text/csv",
       "schema": {
         "fields": [
           {
-            "name": "Year",
+            "name": "Date",
             "type": "date",
-            "description": "Year of measurement (YYYY)"
+            "description": "YYYY-MM-DD"
           },
           {
-            "name": "CSIRO Adjusted Sea Level",
+            "name": "WTI Spot Price",
             "type": "number",
-            "description": "Comulative changes (in inches) in sea level for the world’s oceans based on the combination of long-term tide gauge measurements and recent satellite measurements."
+            "description": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wti-week",
+      "path": "data/wti-week.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "date",
+            "description": "YYYY-MM-DD"
           },
           {
-            "name": "Lower error bound",
+            "name": "WTI Spot Price",
             "type": "number",
-            "description": "inches"
+            "description": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wti-month",
+      "path": "data/wti-month.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "date",
+            "description": "YYYY-MM"
           },
           {
-            "name": "Upper error bound",
+            "name": "WTI Spot Price",
             "type": "number",
-            "description": "inches"
+            "description": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wti-year",
+      "path": "data/wti-year.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "date",
+            "description": "YYYY"
           },
           {
-            "name": "NOAA Adjusted Sea Level",
+            "name": "WTI Spot Price",
             "type": "number",
-            "description": "inches"
+            "description": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)"
           }
         ]
       }
@@ -145,11 +204,11 @@
     {
       "id": "graph",
       "label": "Graph",
-      "resourceName": "epa-sea-level",
+      "resourceName": "brent-day",
       "type": "Graph",
       "state": {
-        "group": "Year",
-        "series": ["CSIRO Adjusted Sea Level", "NOAA Adjusted Sea Level"],
+        "group": "Date",
+        "series": ["Brent Spot Price"],
         "graphType": "lines-and-points"
       }
     }
