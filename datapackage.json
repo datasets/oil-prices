@@ -176,51 +176,59 @@
   "sources": [
     {
       "name": "Daily Europe Brent Spot Price",
-      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls"
+      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls",
+      "title": "Daily Europe Brent Spot Price"
     },
     {
       "name": "Weekly Europe Brent Spot Price",
-      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEw.xls"
+      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEw.xls",
+      "title": "Weekly Europe Brent Spot Price"
     },
     {
       "name": "Monthly Europe Brent Spot Price",
-      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEm.xls"
+      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEm.xls",
+      "title": "Monthly Europe Brent Spot Price"
     },
     {
       "name": "Annual Europe Brent Spot Price",
-      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEa.xls"
+      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEa.xls",
+      "title": "Annual Europe Brent Spot Price"
     },
     {
       "name": "Daily Cushing, OK WTI Spot Price",
-      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCd.xls"
+      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCd.xls",
+      "title": "Daily Cushing, OK WTI Spot Price"
     },
     {
       "name": "Weekly Cushing, OK WTI Spot Price",
-      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCw.xls"
+      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCw.xls",
+      "title": "Weekly Cushing, OK WTI Spot Price"
     },
     {
       "name": "Monthly Cushing, OK WTI Spot Price",
-      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCm.xls"
+      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCm.xls",
+      "title": "Monthly Cushing, OK WTI Spot Price"
     },
     {
       "name": "Annual Cushing, OK WTI Spot Price",
-      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCa.xls"
+      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCa.xls",
+      "title": "Annual Cushing, OK WTI Spot Price"
     }
   ],
   "title": "Brent and WTI Spot Prices",
   "views": [
     {
-      "id": "graph",
-      "label": "Graph",
+      "name": "graph",
+      "title": "Europe Brent Spot Price FOB (Dollars per Barrel)",
       "resourceName": "brent-day",
-      "state": {
-        "graphType": "lines",
+      "specType": "simple",
+      "spec": {
+        "type": "line",
         "group": "Date",
         "series": [
           "Brent Spot Price"
         ]
-      },
-      "type": "Graph"
+      }
     }
   ]
 }
