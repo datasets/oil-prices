@@ -1,7 +1,13 @@
 {
   "description": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
   "homepage": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
-  "license": "ODC-PDDL-1.0",
+  "licenses": [
+    {
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
+    }
+  ],
   "name": "oil-prices",
   "resources": [
     {
@@ -176,42 +182,42 @@
   "sources": [
     {
       "name": "Daily Europe Brent Spot Price",
-      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls",
+      "path": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls",
       "title": "Daily Europe Brent Spot Price"
     },
     {
       "name": "Weekly Europe Brent Spot Price",
-      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEw.xls",
+      "path": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEw.xls",
       "title": "Weekly Europe Brent Spot Price"
     },
     {
       "name": "Monthly Europe Brent Spot Price",
-      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEm.xls",
+      "path": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEm.xls",
       "title": "Monthly Europe Brent Spot Price"
     },
     {
       "name": "Annual Europe Brent Spot Price",
-      "web": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEa.xls",
+      "path": "https://www.eia.gov/dnav/pet/hist_xls/RBRTEa.xls",
       "title": "Annual Europe Brent Spot Price"
     },
     {
       "name": "Daily Cushing, OK WTI Spot Price",
-      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCd.xls",
+      "path": "http://www.eia.gov/dnav/pet/hist_xls/RWTCd.xls",
       "title": "Daily Cushing, OK WTI Spot Price"
     },
     {
       "name": "Weekly Cushing, OK WTI Spot Price",
-      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCw.xls",
+      "path": "http://www.eia.gov/dnav/pet/hist_xls/RWTCw.xls",
       "title": "Weekly Cushing, OK WTI Spot Price"
     },
     {
       "name": "Monthly Cushing, OK WTI Spot Price",
-      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCm.xls",
+      "path": "http://www.eia.gov/dnav/pet/hist_xls/RWTCm.xls",
       "title": "Monthly Cushing, OK WTI Spot Price"
     },
     {
       "name": "Annual Cushing, OK WTI Spot Price",
-      "web": "http://www.eia.gov/dnav/pet/hist_xls/RWTCa.xls",
+      "path": "http://www.eia.gov/dnav/pet/hist_xls/RWTCa.xls",
       "title": "Annual Cushing, OK WTI Spot Price"
     }
   ],
