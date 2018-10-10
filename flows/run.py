@@ -81,7 +81,7 @@ oil_prices = Flow(
                 "title": "Open Data Commons Public Domain Dedication and License v1.0"
             }
         ],
-        keywords=["Gas","Natural gas","Natural gas daily","Natural gas monthly","eia","Natural gas eia"],
+        keywords=["Oil","Brent","WTI","Oil Prices","eia","oil eia"],
         views=[
             {
                 "name": "graph",
