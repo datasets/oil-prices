@@ -1,6 +1,16 @@
 {
-  "description": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "homepage": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
+  "bytes": 1227987,
+  "count_of_rows": 20424,
+  "descriptor": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
+  "hash": "9f29962514d83b5a0e7bd4e90693d594",
+  "keywords": [
+    "Oil",
+    "Brent",
+    "WTI",
+    "Oil Prices",
+    "eia",
+    "oil eia"
+  ],
   "licenses": [
     {
       "name": "ODC-PDDL-1.0",
@@ -9,172 +19,205 @@
     }
   ],
   "name": "oil-prices",
+  "profile": "data-package",
   "resources": [
     {
-      "format": "csv",
-      "mediatype": "text/csv",
-      "name": "brent-day",
-      "path": "data/brent-day.csv",
+      "encoding": "iso-8859-5",
+      "format": "xls",
+      "mediatype": "text/xls",
+      "name": "brent-daily",
+      "path": "data/brent-daily.csv",
+      "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "description": "YYYY-MM-DD",
             "format": "any",
             "name": "Date",
             "type": "date"
           },
           {
-            "description": "Europe Brent Spot Price FOB (Dollars per Barrel)",
-            "name": "Brent Spot Price",
+            "format": "default",
+            "name": "Price",
             "type": "number"
           }
+        ],
+        "missingValues": [
+          ""
         ]
       }
     },
     {
-      "format": "csv",
-      "mediatype": "text/csv",
+      "encoding": "iso-8859-5",
+      "format": "xls",
+      "mediatype": "text/xls",
       "name": "brent-week",
-      "path": "data/brent-week.csv",
+      "path": "data/brent-weekly.csv",
+      "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "description": "YYYY-MM-DD",
             "format": "any",
             "name": "Date",
             "type": "date"
           },
           {
-            "description": "Europe Brent Spot Price FOB (Dollars per Barrel)",
-            "name": "Brent Spot Price",
+            "format": "default",
+            "name": "Price",
             "type": "number"
           }
+        ],
+        "missingValues": [
+          ""
         ]
       }
     },
     {
-      "format": "csv",
-      "mediatype": "text/csv",
+      "encoding": "iso-8859-5",
+      "format": "xls",
+      "mediatype": "text/xls",
       "name": "brent-month",
-      "path": "data/brent-month.csv",
+      "path": "data/brent-monthly.csv",
+      "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "description": "YYYY-MM",
             "format": "any",
             "name": "Date",
             "type": "date"
           },
           {
-            "description": "Europe Brent Spot Price FOB (Dollars per Barrel)",
-            "name": "Brent Spot Price",
+            "format": "default",
+            "name": "Price",
             "type": "number"
           }
+        ],
+        "missingValues": [
+          ""
         ]
       }
     },
     {
-      "format": "csv",
-      "mediatype": "text/csv",
+      "encoding": "iso-8859-5",
+      "format": "xls",
+      "mediatype": "text/xls",
       "name": "brent-year",
       "path": "data/brent-year.csv",
+      "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "description": "YYYY",
             "format": "any",
             "name": "Date",
             "type": "date"
           },
           {
-            "description": "Europe Brent Spot Price FOB (Dollars per Barrel)",
-            "name": "Brent Spot Price",
-            "type": "number"
+            "format": "default",
+            "name": "Price",
+            "type": "any"
           }
+        ],
+        "missingValues": [
+          ""
         ]
       }
     },
     {
-      "format": "csv",
-      "mediatype": "text/csv",
-      "name": "wti-day",
-      "path": "data/wti-day.csv",
+      "encoding": "iso-8859-5",
+      "format": "xls",
+      "mediatype": "text/xls",
+      "name": "wti-daily",
+      "path": "data/wti-daily.csv",
+      "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "description": "YYYY-MM-DD",
             "format": "any",
             "name": "Date",
             "type": "date"
           },
           {
-            "description": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)",
-            "name": "WTI Spot Price",
+            "format": "default",
+            "name": "Price",
             "type": "number"
           }
+        ],
+        "missingValues": [
+          ""
         ]
       }
     },
     {
-      "format": "csv",
-      "mediatype": "text/csv",
+      "encoding": "iso-8859-5",
+      "format": "xls",
+      "mediatype": "text/xls",
       "name": "wti-week",
-      "path": "data/wti-week.csv",
+      "path": "data/wti-weekly.csv",
+      "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "description": "YYYY-MM-DD",
             "format": "any",
             "name": "Date",
             "type": "date"
           },
           {
-            "description": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)",
-            "name": "WTI Spot Price",
+            "format": "default",
+            "name": "Price",
             "type": "number"
           }
+        ],
+        "missingValues": [
+          ""
         ]
       }
     },
     {
-      "format": "csv",
-      "mediatype": "text/csv",
+      "encoding": "iso-8859-5",
+      "format": "xls",
+      "mediatype": "text/xls",
       "name": "wti-month",
-      "path": "data/wti-month.csv",
+      "path": "data/wti-monthly.csv",
+      "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "description": "YYYY-MM",
             "format": "any",
             "name": "Date",
             "type": "date"
           },
           {
-            "description": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)",
-            "name": "WTI Spot Price",
+            "format": "default",
+            "name": "Price",
             "type": "number"
           }
+        ],
+        "missingValues": [
+          ""
         ]
       }
     },
     {
-      "format": "csv",
-      "mediatype": "text/csv",
+      "encoding": "iso-8859-5",
+      "format": "xls",
+      "mediatype": "text/xls",
       "name": "wti-year",
       "path": "data/wti-year.csv",
+      "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "description": "YYYY",
             "format": "any",
             "name": "Date",
             "type": "date"
           },
           {
-            "description": "Cushing, OK WTI Spot Price FOB (Dollars per Barrel)",
-            "name": "WTI Spot Price",
-            "type": "number"
+            "format": "default",
+            "name": "Price",
+            "type": "any"
           }
+        ],
+        "missingValues": [
+          ""
         ]
       }
     }
@@ -225,16 +268,16 @@
   "views": [
     {
       "name": "graph",
-      "title": "Europe Brent Spot Price FOB (Dollars per Barrel)",
       "resourceName": "brent-day",
-      "specType": "simple",
       "spec": {
-        "type": "line",
         "group": "Date",
         "series": [
           "Brent Spot Price"
-        ]
-      }
+        ],
+        "type": "line"
+      },
+      "specType": "simple",
+      "title": "Europe Brent Spot Price FOB (Dollars per Barrel)"
     }
   ]
 }
