@@ -1,18 +1,20 @@
+import datetime
+
 from dataflows import Flow, PackageWrapper, ResourceWrapper, validate
 from dataflows import add_metadata, dump_to_path, load, set_type, printer
 
 
 def rename_resources(package: PackageWrapper):
-    package.pkg.descriptor['resources'][0]['name'] = 'brent-day'
-    package.pkg.descriptor['resources'][0]['path'] = 'data/brent-day.csv'
+    package.pkg.descriptor['resources'][0]['name'] = 'brent-daily'
+    package.pkg.descriptor['resources'][0]['path'] = 'data/brent-daily.csv'
     package.pkg.descriptor['resources'][1]['name'] = 'brent-week'
     package.pkg.descriptor['resources'][1]['path'] = 'data/brent-weekly.csv'
     package.pkg.descriptor['resources'][2]['name'] = 'brent-month'
     package.pkg.descriptor['resources'][2]['path'] = 'data/brent-monthly.csv'
     package.pkg.descriptor['resources'][3]['name'] = 'brent-year'
     package.pkg.descriptor['resources'][3]['path'] = 'data/brent-year.csv'
-    package.pkg.descriptor['resources'][4]['name'] = 'wti-day'
-    package.pkg.descriptor['resources'][4]['path'] = 'data/wti-day.csv'
+    package.pkg.descriptor['resources'][4]['name'] = 'wti-daily'
+    package.pkg.descriptor['resources'][4]['path'] = 'data/wti-daily.csv'
     package.pkg.descriptor['resources'][5]['name'] = 'wti-week'
     package.pkg.descriptor['resources'][5]['path'] = 'data/wti-weekly.csv'
     package.pkg.descriptor['resources'][6]['name'] = 'wti-month'
@@ -25,6 +27,14 @@ def rename_resources(package: PackageWrapper):
     for res in  res_iter:
         yield res.it
     yield from package
+
+
+def format_date(row):
+    if row.get('Date'):
+        # Float returned by XLS file is exactly 693594 less then ordinal number in python
+        pre_date = datetime.date(1997, 1, 7).fromordinal(int(row.get('Date') + 693594))
+        formated_date = datetime.datetime.strptime((str(pre_date)), "%Y-%m-%d").strftime('%Y-%m-%d')
+        row['Date'] = formated_date
 
 
 oil_prices = Flow(
@@ -100,61 +110,61 @@ oil_prices = Flow(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls',
         format='xls',
         sheet=2,
-        skip_rows=3,
+        skip_rows=[1,2,3],
         headers=['Date', 'Price']
     ),
     load(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEw.xls',
         format='xls',
         sheet=2,
-        skip_rows=3,
+        skip_rows=[1,2,3],
         headers=['Date', 'Price']
     ),
     load(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEm.xls',
         format='xls',
         sheet=2,
-        skip_rows=3,
+        skip_rows=[1,2,3],
         headers=['Date', 'Price']
     ),
     load(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEa.xls',
         format='xls',
         sheet=2,
-        skip_rows=3,
+        skip_rows=[1,2,3],
         headers=['Date', 'Price']
     ),
     load(
         load_source='http://www.eia.gov/dnav/pet/hist_xls/RWTCd.xls',
         format='xls',
         sheet=2,
-        skip_rows=3,
+        skip_rows=[1,2,3],
         headers=['Date', 'Price']
     ),
     load(
         load_source='http://www.eia.gov/dnav/pet/hist_xls/RWTCw.xls',
         format='xls',
         sheet=2,
-        skip_rows=3,
+        skip_rows=[1,2,3],
         headers=['Date', 'Price']
     ),
     load(
         load_source='http://www.eia.gov/dnav/pet/hist_xls/RWTCm.xls',
         format='xls',
         sheet=2,
-        skip_rows=3,
+        skip_rows=[1,2,3],
         headers=['Date', 'Price']
     ),
     load(
         load_source='http://www.eia.gov/dnav/pet/hist_xls/RWTCa.xls',
         format='xls',
         sheet=2,
-        skip_rows=3,
+        skip_rows=[1,2,3],
         headers=['Date', 'Price']
     ),
-    set_type('Date', type='date', format='any'),
-    set_type('Price', type='float'),
     rename_resources,
+    format_date,
+    set_type('Date', resources=None, type='date', format='any'),
     validate(),
     printer(),
     dump_to_path(),
