@@ -102,7 +102,7 @@ oil_prices = Flow(
         sheet=2,
         skip_rows=[1,2,3],
         headers=['Date', 'Price'],
-        name='brent-week'
+        name='brent-weekly'
     ),
     load(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEm.xls',
@@ -110,7 +110,7 @@ oil_prices = Flow(
         sheet=2,
         skip_rows=[1,2,3],
         headers=['Date', 'Price'],
-        name='brent-month'
+        name='brent-monthly'
     ),
     load(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEa.xls',
@@ -159,7 +159,7 @@ oil_prices = Flow(
     update_resource('wti-daily', **{'path':'data/wti-daily.csv', 'dpp:streaming': True}),
     update_resource('wti-weekly', **{'path':'data/wti-weekly.csv', 'dpp:streaming': True}),
     update_resource('wti-monthly', **{'path':'data/wti-monthly.csv', 'dpp:streaming': True}),
-    update_resource('wti-monthly', **{'path':'data/wti-monthly.csv', 'dpp:streaming': True}),
+    update_resource('wti-annual', **{'path':'data/wti-annual.csv', 'dpp:streaming': True}),
     format_date,
     set_type('Date', resources=None, type='date', format='any'),
     validate(),
