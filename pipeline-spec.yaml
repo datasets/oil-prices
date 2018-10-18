@@ -1,0 +1,3 @@
+oil_prices-flow:
+  pipeline:
+    - flow: oil_prices_flow
