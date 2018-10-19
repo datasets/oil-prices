@@ -1,8 +1,7 @@
 import datetime
 import os
 
-from dataflows import Flow, validate, update_resource
-from dataflows import add_metadata, dump_to_path, load, set_type
+from dataflows import Flow, validate, update_resource, add_metadata, load, set_type
 
 
 def readme(fpath='README.md'):
@@ -162,8 +161,7 @@ oil_prices = Flow(
     update_resource('wti-annual', **{'path':'data/wti-annual.csv', 'dpp:streaming': True}),
     format_date,
     set_type('Date', resources=None, type='date', format='any'),
-    validate(),
-    dump_to_path(),
+    validate()
 )
 
 

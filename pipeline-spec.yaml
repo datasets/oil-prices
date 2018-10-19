@@ -1,3 +1,6 @@
 oil-prices-flow:
   pipeline:
     - flow: oil_prices_flow
+    - run: datahub.dump.to_datahub
+  schedule:
+    crontab: 59 23 * * *
