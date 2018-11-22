@@ -12,9 +12,9 @@ def readme(fpath='README.md'):
 def format_date(row):
     if row.get('Date'):
         # Float returned by XLS file is exactly 693594 less then ordinal number in python
-        # pre_date = datetime.date(1997, 1, 7).fromordinal(int(row.get('Date') + 693594))
-        # formated_date = datetime.datetime.strptime((str(pre_date)), "%Y-%m-%d").strftime('%Y-%m-%d')
-        row['Date'] = row.get('Date') #formated_date
+        pre_date = datetime.date(1997, 1, 7).fromordinal(int(row.get('Date') + 693594))
+        formated_date = datetime.datetime.strptime((str(pre_date)), "%Y-%m-%d").strftime('%Y-%m-%d')
+        row['Date'] = formated_date
 
 
 def remove_empty_rows(rows):
