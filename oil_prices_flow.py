@@ -1,5 +1,4 @@
 import os
-
 from dataflows import Flow, validate, update_resource, add_metadata, load, set_type, dump_to_path
 
 
@@ -17,7 +16,7 @@ def remove_empty_rows(rows):
 oil_prices = Flow(
     add_metadata(
         name="oil-prices",
-        title= "Brent and WTI Spot Prices",
+        title="Brent and WTI Spot Prices",
         descriptor="A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
         sources=[
             {
@@ -68,7 +67,7 @@ oil_prices = Flow(
                 "title": "Open Data Commons Public Domain Dedication and License v1.0"
             }
         ],
-        keywords=["Oil","Brent","WTI","Oil Prices","eia","oil eia"],
+        keywords=["Oil", "Brent", "WTI", "Oil Prices", "eia", "oil eia"],
         views=[
             {
                 "name": "graph",
@@ -76,7 +75,7 @@ oil_prices = Flow(
                 "resourceName": "brent-day",
                 "specType": "simple",
                 "spec": {
-                "type": "line",
+                    "type": "line",
                     "group": "Date",
                     "series": ["Brent Spot Price"]
                 }
@@ -88,7 +87,7 @@ oil_prices = Flow(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEd.xls',
         format='xls',
         sheet=2,
-        skip_rows=[1,2,3],
+        skip_rows=[1, 2, 3],
         headers=['Date', 'Price'],
         name='brent-daily'
     ),
@@ -96,7 +95,7 @@ oil_prices = Flow(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEw.xls',
         format='xls',
         sheet=2,
-        skip_rows=[1,2,3],
+        skip_rows=[1, 2, 3],
         headers=['Date', 'Price'],
         name='brent-weekly'
     ),
@@ -104,7 +103,7 @@ oil_prices = Flow(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEm.xls',
         format='xls',
         sheet=2,
-        skip_rows=[1,2,3],
+        skip_rows=[1, 2, 3],
         headers=['Date', 'Price'],
         name='brent-monthly'
     ),
@@ -112,7 +111,7 @@ oil_prices = Flow(
         load_source='https://www.eia.gov/dnav/pet/hist_xls/RBRTEa.xls',
         format='xls',
         sheet=2,
-        skip_rows=[1,2,3],
+        skip_rows=[1, 2, 3],
         headers=['Date', 'Price'],
         name='brent-annual'
     ),
@@ -120,7 +119,7 @@ oil_prices = Flow(
         load_source='http://www.eia.gov/dnav/pet/hist_xls/RWTCd.xls',
         format='xls',
         sheet=2,
-        skip_rows=[1,2,3],
+        skip_rows=[1, 2, 3],
         headers=['Date', 'Price'],
         name='wti-daily'
     ),
@@ -128,7 +127,7 @@ oil_prices = Flow(
         load_source='http://www.eia.gov/dnav/pet/hist_xls/RWTCw.xls',
         format='xls',
         sheet=2,
-        skip_rows=[1,2,3],
+        skip_rows=[1, 2, 3],
         headers=['Date', 'Price'],
         name='wti-weekly'
     ),
@@ -136,7 +135,7 @@ oil_prices = Flow(
         load_source='http://www.eia.gov/dnav/pet/hist_xls/RWTCm.xls',
         format='xls',
         sheet=2,
-        skip_rows=[1,2,3],
+        skip_rows=[1, 2, 3],
         headers=['Date', 'Price'],
         name='wti-monthly'
     ),
@@ -144,28 +143,23 @@ oil_prices = Flow(
         load_source='http://www.eia.gov/dnav/pet/hist_xls/RWTCa.xls',
         format='xls',
         sheet=2,
-        skip_rows=[1,2,3],
+        skip_rows=[1, 2, 3],
         headers=['Date', 'Price'],
         name='wti-annual'
     ),
-    update_resource('brent-daily', **{'path':'data/brent-daily.csv', 'dpp:streaming': True}),
-    update_resource('brent-weekly', **{'path':'data/brent-weekly.csv', 'dpp:streaming': True}),
-    update_resource('brent-monthly', **{'path':'data/brent-monthly.csv', 'dpp:streaming': True}),
-    update_resource('brent-annual', **{'path':'data/brent-annual.csv', 'dpp:streaming': True}),
-    update_resource('wti-daily', **{'path':'data/wti-daily.csv', 'dpp:streaming': True}),
-    update_resource('wti-weekly', **{'path':'data/wti-weekly.csv', 'dpp:streaming': True}),
-    update_resource('wti-monthly', **{'path':'data/wti-monthly.csv', 'dpp:streaming': True}),
-    update_resource('wti-annual', **{'path':'data/wti-annual.csv', 'dpp:streaming': True}),
+    update_resource('brent-daily', **{'path': 'data/brent-daily.csv', 'dpp:streaming': True}),
+    update_resource('brent-weekly', **{'path': 'data/brent-weekly.csv', 'dpp:streaming': True}),
+    update_resource('brent-monthly', **{'path': 'data/brent-monthly.csv', 'dpp:streaming': True}),
+    update_resource('brent-annual', **{'path': 'data/brent-annual.csv', 'dpp:streaming': True}),
+    update_resource('wti-daily', **{'path': 'data/wti-daily.csv', 'dpp:streaming': True}),
+    update_resource('wti-weekly', **{'path': 'data/wti-weekly.csv', 'dpp:streaming': True}),
+    update_resource('wti-monthly', **{'path': 'data/wti-monthly.csv', 'dpp:streaming': True}),
+    update_resource('wti-annual', **{'path': 'data/wti-annual.csv', 'dpp:streaming': True}),
     remove_empty_rows,
     set_type('Date', resources=None, type='date', format='any'),
     validate(),
-    dump_to_path('data')
+    dump_to_path()
 )
-
-
-def flow(parameters, datapackage, resources, stats):
-    return oil_prices
-
 
 if __name__ == '__main__':
     oil_prices.process()
