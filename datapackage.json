@@ -1,8 +1,8 @@
 {
-  "bytes": 1228598,
-  "count_of_rows": 20434,
+  "bytes": 1236355,
+  "count_of_rows": 20557,
   "descriptor": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "50835a382ce4324c39490186223c796b",
+  "hash": "9dc97eb75f9f6694b1a906510e4f0069",
   "keywords": [
     "Oil",
     "Brent",
@@ -20,11 +20,19 @@
   ],
   "name": "oil-prices",
   "profile": "data-package",
-  "readme": "Europe Brent and WTI (Western Texas Intermediate) Spot Prices (Annual/ Monthly/ Weekly/ Daily) from EIA U.S. (Energy Information Administration).\n\n## Data\n\nThis series is available through the EIA open data API\n\n- [Europe Brent Spot Price FOB (Dollars per Barrel)](https://www.eia.gov/dnav/pet/hist/RBRTEd.htm) - From 20 May 1987 till today\n- [Cushing, OK WTI Spot Price FOB (Dollars per Barrel)](https://www.eia.gov/dnav/pet/hist/RWTCD.htm) - From 01 February 1986 till today\n\n### Definitions\n\n#### Brent\n> A blended crude stream produced in the North Sea region which serves as a reference or \"marker\" for pricing a number of other crude streams.\n[source](https://www.eia.gov/dnav/pet/TblDefs/pet_pri_spt_tbldef2.asp)\n\n#### West Texas Intermediate (WTI - Cushing)\n> A crude stream produced in Texas and southern Oklahoma which serves as a reference or \"marker\" for pricing a number of other crude streams and which is traded in the domestic spot market at Cushing, Oklahoma.\n[source](https://www.eia.gov/dnav/pet/TblDefs/pet_pri_spt_tbldef2.asp)\n\n## Preparation\n\nYou will need Python 3.6 or greater and dataflows library to run the script\n\nTo update the data run the process script locally:\n\n```\n# Install dataflows\npip install dataflows\n\n# Run the script\npython oil_prices_flow.py\n```\n\n## License\n\n> U.S. government publications are in the public domain and are not subject to copyright protection. You may use and/or distribute any of our data, files, databases, reports, graphs, charts, and other information products that are on our website or that you receive through our email distribution service. However, if you use or reproduce any of our information products, you should use an acknowledgment, which includes the publication date, such as: \"Source: U.S. Energy Information Administration (Oct 2008).\"\n\nYou may find further information [here](https://www.eia.gov/about/copyrights_reuse.cfm)\n\n### Additional work\n\n> All the additional work made to build this Data Package is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: http://www.opendatacommons.org/licenses/pddl/1.0/\n",
   "resources": [
     {
-      "dpp:streaming": true,
-      "format": "xls",
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
       "mediatype": "text/xls",
       "name": "brent-daily",
       "path": "data/brent-daily.csv",
@@ -32,12 +40,14 @@
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "format": "default",
+            "groupChar": "",
             "name": "Price",
             "type": "number"
           }
@@ -48,21 +58,32 @@
       }
     },
     {
-      "dpp:streaming": true,
-      "format": "xls",
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
       "mediatype": "text/xls",
-      "name": "brent-weekly",
+      "name": "brent-week",
       "path": "data/brent-weekly.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "format": "default",
+            "groupChar": "",
             "name": "Price",
             "type": "number"
           }
@@ -73,21 +94,32 @@
       }
     },
     {
-      "dpp:streaming": true,
-      "format": "xls",
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
       "mediatype": "text/xls",
-      "name": "brent-monthly",
+      "name": "brent-month",
       "path": "data/brent-monthly.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "format": "default",
+            "groupChar": "",
             "name": "Price",
             "type": "number"
           }
@@ -98,16 +130,25 @@
       }
     },
     {
-      "dpp:streaming": true,
-      "format": "xls",
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
       "mediatype": "text/xls",
-      "name": "brent-annual",
-      "path": "data/brent-annual.csv",
+      "name": "brent-year",
+      "path": "data/brent-year.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
@@ -123,8 +164,17 @@
       }
     },
     {
-      "dpp:streaming": true,
-      "format": "xls",
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
       "mediatype": "text/xls",
       "name": "wti-daily",
       "path": "data/wti-daily.csv",
@@ -132,12 +182,14 @@
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "format": "default",
+            "groupChar": "",
             "name": "Price",
             "type": "number"
           }
@@ -148,21 +200,32 @@
       }
     },
     {
-      "dpp:streaming": true,
-      "format": "xls",
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
       "mediatype": "text/xls",
-      "name": "wti-weekly",
+      "name": "wti-week",
       "path": "data/wti-weekly.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "format": "default",
+            "groupChar": "",
             "name": "Price",
             "type": "number"
           }
@@ -173,21 +236,32 @@
       }
     },
     {
-      "dpp:streaming": true,
-      "format": "xls",
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
       "mediatype": "text/xls",
-      "name": "wti-monthly",
+      "name": "wti-month",
       "path": "data/wti-monthly.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "format": "default",
+            "groupChar": "",
             "name": "Price",
             "type": "number"
           }
@@ -198,16 +272,25 @@
       }
     },
     {
-      "dpp:streaming": true,
-      "format": "xls",
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
       "mediatype": "text/xls",
-      "name": "wti-annual",
-      "path": "data/wti-annual.csv",
+      "name": "wti-year",
+      "path": "data/wti-year.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "format": "any",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
