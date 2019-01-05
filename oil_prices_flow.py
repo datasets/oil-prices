@@ -1,20 +1,11 @@
-import datetime
 import os
 
-from dataflows import Flow, validate, update_resource, add_metadata, load, set_type, dump_to_path, filter_rows
+from dataflows import Flow, validate, update_resource, add_metadata, load, set_type, dump_to_path
 
 
 def readme(fpath='README.md'):
     if os.path.exists(fpath):
         return open(fpath).read()
-
-
-def format_date(row):
-    if row.get('Date'):
-        # Float returned by XLS file is exactly 693594 less then ordinal number in python
-        pre_date = datetime.date(1997, 1, 7).fromordinal(int(row.get('Date') + 693594))
-        formated_date = datetime.datetime.strptime((str(pre_date)), "%Y-%m-%d").strftime('%Y-%m-%d')
-        row['Date'] = formated_date
 
 
 def remove_empty_rows(rows):
@@ -165,7 +156,6 @@ oil_prices = Flow(
     update_resource('wti-weekly', **{'path':'data/wti-weekly.csv', 'dpp:streaming': True}),
     update_resource('wti-monthly', **{'path':'data/wti-monthly.csv', 'dpp:streaming': True}),
     update_resource('wti-annual', **{'path':'data/wti-annual.csv', 'dpp:streaming': True}),
-    format_date,
     remove_empty_rows,
     set_type('Date', resources=None, type='date', format='any'),
     validate(),
