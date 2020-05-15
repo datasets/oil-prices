@@ -1,8 +1,8 @@
 {
-  "bytes": 1236355,
-  "count_of_rows": 20557,
+  "bytes": 384242,
+  "count_of_rows": 21419,
   "descriptor": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "9dc97eb75f9f6694b1a906510e4f0069",
+  "hash": "cc44113c55e03adc66abf442fed9d938",
   "keywords": [
     "Oil",
     "Brent",
@@ -22,6 +22,7 @@
   "profile": "data-package",
   "resources": [
     {
+      "bytes": 150157,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -33,7 +34,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/xls",
+      "hash": "778e962cc648f29df3956c293bba5fbb",
       "name": "brent-daily",
       "path": "data/brent-daily.csv",
       "profile": "tabular-data-resource",
@@ -58,6 +59,7 @@
       }
     },
     {
+      "bytes": 30989,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -69,7 +71,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/xls",
+      "hash": "a4f5b2604f83ecb444c114a81fed8fe2",
       "name": "brent-week",
       "path": "data/brent-weekly.csv",
       "profile": "tabular-data-resource",
@@ -94,6 +96,7 @@
       }
     },
     {
+      "bytes": 7143,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -105,7 +108,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/xls",
+      "hash": "205f88c7758e0fc05e43da5ea5d6278e",
       "name": "brent-month",
       "path": "data/brent-monthly.csv",
       "profile": "tabular-data-resource",
@@ -130,6 +133,7 @@
       }
     },
     {
+      "bytes": 590,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -141,7 +145,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/xls",
+      "hash": "0f826f324a5e645df3a4446a179d534d",
       "name": "brent-year",
       "path": "data/brent-year.csv",
       "profile": "tabular-data-resource",
@@ -153,9 +157,11 @@
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "format": "default",
+            "groupChar": "",
             "name": "Price",
-            "type": "any"
+            "type": "number"
           }
         ],
         "missingValues": [
@@ -164,6 +170,7 @@
       }
     },
     {
+      "bytes": 155184,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -175,7 +182,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/xls",
+      "hash": "3c3b773f0e7b54e4c06d613941049c92",
       "name": "wti-daily",
       "path": "data/wti-daily.csv",
       "profile": "tabular-data-resource",
@@ -200,6 +207,7 @@
       }
     },
     {
+      "bytes": 32160,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -211,7 +219,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/xls",
+      "hash": "c6801cff0bc25b0a0e783657ef774d97",
       "name": "wti-week",
       "path": "data/wti-weekly.csv",
       "profile": "tabular-data-resource",
@@ -236,6 +244,7 @@
       }
     },
     {
+      "bytes": 7401,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -247,7 +256,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/xls",
+      "hash": "5871ce6accacff3cae780f17cf874693",
       "name": "wti-month",
       "path": "data/wti-monthly.csv",
       "profile": "tabular-data-resource",
@@ -272,6 +281,7 @@
       }
     },
     {
+      "bytes": 618,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -283,7 +293,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "mediatype": "text/xls",
+      "hash": "2b9e89ade44c090394348e0ab82d2c08",
       "name": "wti-year",
       "path": "data/wti-year.csv",
       "profile": "tabular-data-resource",
@@ -295,9 +305,11 @@
             "type": "date"
           },
           {
+            "decimalChar": ".",
             "format": "default",
+            "groupChar": "",
             "name": "Price",
-            "type": "any"
+            "type": "number"
           }
         ],
         "missingValues": [
