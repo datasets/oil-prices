@@ -1,8 +1,8 @@
 {
-  "bytes": 412293,
-  "count_of_rows": 22973,
+  "bytes": 412383,
+  "count_of_rows": 22978,
   "descriptor": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "5d7d45b4090f6580adc1f705b2c42546",
+  "hash": "5e2459200f56a65a965af523a8ffb2e8",
   "keywords": [
     "Oil",
     "Brent",
@@ -22,7 +22,7 @@
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 161320,
+      "bytes": 161410,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -34,7 +34,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "04379485018e3b2fa6f46242929b88d6",
+      "hash": "ab25e6552a665450f5e48553c19e2201",
       "name": "brent-daily",
       "path": "data/brent-daily.csv",
       "profile": "tabular-data-resource",
