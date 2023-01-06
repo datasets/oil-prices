@@ -1,8 +1,8 @@
 {
-  "bytes": 414381,
-  "count_of_rows": 23090,
+  "bytes": 414614,
+  "count_of_rows": 23103,
   "descriptor": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "a6978a7b7a53838d266c2d3a00ad3334",
+  "hash": "af0b7c3b201c19637b7c43fe36397df2",
   "keywords": [
     "Oil",
     "Brent",
@@ -22,7 +22,7 @@
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 162208,
+      "bytes": 162279,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -34,7 +34,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "f8f5b5b3d65183390bd09a74be15bc73",
+      "hash": "54164259f2aa433cb80a01a4c4db2739",
       "name": "brent-daily",
       "path": "data/brent-daily.csv",
       "profile": "tabular-data-resource",
@@ -59,7 +59,7 @@
       }
     },
     {
-      "bytes": 33460,
+      "bytes": 33478,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -71,7 +71,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "ea479cb3f29f9065631703d246914411",
+      "hash": "91a38fb391a4f904f4ed015a5ab7f630",
       "name": "brent-week",
       "path": "data/brent-weekly.csv",
       "profile": "tabular-data-resource",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "bytes": 7707,
+      "bytes": 7725,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -108,7 +108,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "be20c4fe79eaad579e514522195d61d1",
+      "hash": "9d897b7567be83a90561d4714792354d",
       "name": "brent-month",
       "path": "data/brent-monthly.csv",
       "profile": "tabular-data-resource",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "bytes": 643,
+      "bytes": 662,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -145,7 +145,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "3ae3548038a051ffb4f477381f9873c7",
+      "hash": "dc0c2e9a91a0494421ee1bd9813faecc",
       "name": "brent-year",
       "path": "data/brent-year.csv",
       "profile": "tabular-data-resource",
@@ -170,7 +170,7 @@
       }
     },
     {
-      "bytes": 167116,
+      "bytes": 167170,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -182,7 +182,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "eab2ccc3f54a6ec913bc83b6f33423fa",
+      "hash": "2311e019f804aa2199781ca33954d08f",
       "name": "wti-daily",
       "path": "data/wti-daily.csv",
       "profile": "tabular-data-resource",
@@ -207,7 +207,7 @@
       }
     },
     {
-      "bytes": 34631,
+      "bytes": 34649,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -219,7 +219,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "d3ca085f4f986372cbe239b851298e9f",
+      "hash": "2a7fcf833cb0211843d5a42e28feb13f",
       "name": "wti-week",
       "path": "data/wti-weekly.csv",
       "profile": "tabular-data-resource",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "bytes": 7959,
+      "bytes": 7977,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -256,7 +256,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "3b2398548aae1485f68ada275c71e8f1",
+      "hash": "ef7ea97f8a513814915def5d68a14c2d",
       "name": "wti-month",
       "path": "data/wti-monthly.csv",
       "profile": "tabular-data-resource",
@@ -281,7 +281,7 @@
       }
     },
     {
-      "bytes": 657,
+      "bytes": 674,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -293,7 +293,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "79df99064303543f291c9ba1aaf4dbc0",
+      "hash": "91461cbb00b49a4bac329606182814fa",
       "name": "wti-year",
       "path": "data/wti-year.csv",
       "profile": "tabular-data-resource",
