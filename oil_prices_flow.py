@@ -99,7 +99,7 @@ OIL_PRICES = Flow(
             {
                 "name": "graph",
                 "title": "Europe Brent Spot Price FOB (Dollars per Barrel)",
-                "resourceName": "brent-day",
+                "resourceName": "brent-daily",
                 "specType": "simple",
                 "spec": {
                     "type": "line",
