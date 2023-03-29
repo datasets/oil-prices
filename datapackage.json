@@ -364,7 +364,7 @@
   "views": [
     {
       "name": "graph",
-      "resourceName": "brent-day",
+      "resourceName": "brent-daily",
       "spec": {
         "group": "Date",
         "series": [
