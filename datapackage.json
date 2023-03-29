@@ -368,7 +368,7 @@
       "spec": {
         "group": "Date",
         "series": [
-          "Brent Spot Price"
+          "Price"
         ],
         "type": "line"
       },
