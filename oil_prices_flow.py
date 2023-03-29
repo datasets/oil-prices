@@ -104,7 +104,7 @@ OIL_PRICES = Flow(
                 "spec": {
                     "type": "line",
                     "group": "Date",
-                    "series": ["Brent Spot Price"],
+                    "series": ["Price"],
                 },
             }
         ],
