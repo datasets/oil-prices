@@ -1,8 +1,8 @@
 {
-  "bytes": 417790,
-  "count_of_rows": 23281,
+  "bytes": 418006,
+  "count_of_rows": 23293,
   "descriptor": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "7739f57ba543ec2887d4091065d5586d",
+  "hash": "d0816c45b770f32f543ebdece2a25f8f",
   "keywords": [
     "Oil",
     "Brent",
@@ -22,7 +22,7 @@
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 163546,
+      "bytes": 163636,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -34,7 +34,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "558dc98b56349224eb41c58841ff51b1",
+      "hash": "de7dc38696d73dc334ef5ba80cf88eca",
       "name": "brent-daily",
       "path": "data/brent-daily.csv",
       "profile": "tabular-data-resource",
@@ -59,7 +59,7 @@
       }
     },
     {
-      "bytes": 33741,
+      "bytes": 33759,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -71,7 +71,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "70e9bdd1ecf3ba470822e6a1b40accdb",
+      "hash": "248ee5369c9640950904a6b0510fc622",
       "name": "brent-week",
       "path": "data/brent-weekly.csv",
       "profile": "tabular-data-resource",
@@ -170,7 +170,7 @@
       }
     },
     {
-      "bytes": 168441,
+      "bytes": 168531,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -182,7 +182,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "4aed0ed720684889668451bd4493ec4b",
+      "hash": "dae417c617d9e31f8d0994db1b810ac2",
       "name": "wti-daily",
       "path": "data/wti-daily.csv",
       "profile": "tabular-data-resource",
@@ -207,7 +207,7 @@
       }
     },
     {
-      "bytes": 34917,
+      "bytes": 34935,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -219,7 +219,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "50a4e80c36bcd8fa65f193a51b8bc6c1",
+      "hash": "83fb71d1d39251fa3847b9e3f93a544a",
       "name": "wti-week",
       "path": "data/wti-weekly.csv",
       "profile": "tabular-data-resource",
