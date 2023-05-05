@@ -1,8 +1,8 @@
 {
-  "bytes": 418221,
-  "count_of_rows": 23305,
+  "bytes": 418239,
+  "count_of_rows": 23306,
   "descriptor": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "cfbeeab463c281bbf3e1c6d38d55edd0",
+  "hash": "45f968b02d3b30c6f5415b7b7894d191",
   "keywords": [
     "Oil",
     "Brent",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "bytes": 7778,
+      "bytes": 7796,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -108,7 +108,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "bb2e2437fc4e945be49a89b60415edfe",
+      "hash": "31c019e419a30b9557bef431f2154ce3",
       "name": "brent-month",
       "path": "data/brent-monthly.csv",
       "profile": "tabular-data-resource",
