@@ -3,7 +3,7 @@ on:
     - cron:  '0 1 * * *'
   push:
     branches:
-      - master
+      - main
 permissions:
   contents: write
 jobs:
