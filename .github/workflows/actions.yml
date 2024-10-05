@@ -15,6 +15,7 @@ jobs:
       with:
         python-version: '3.11'
         architecture: x64
+        cache: 'pip'
     - name: Install requirements
       run: |
         pip install -r requirements.txt
