@@ -29,18 +29,3 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git commit --allow-empty -m "Auto-update of the data packages" -a
         git push
-  deploy:
-    needs: update
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-    - run: npm install -g data-cli
-    - run: data --version
-    - run: data push
-      env:
-        id: ${{secrets.dhid}}
-        username: ${{secrets.dhusername}}
-        token: ${{secrets.dhtoken}}
