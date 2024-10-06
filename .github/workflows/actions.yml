@@ -3,41 +3,40 @@ on:
     - cron:  '0 1 * * *'
   push:
     branches:
-      - master
-
+      - main
+permissions:
+  contents: write
 jobs:
   update:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v4
     - name: Build the data and create local changes
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.6'
+        python-version: '3.11'
         architecture: x64
+        cache: 'pip'
     - name: Install requirements
       run: |
         pip install -r requirements.txt
     - name: Process Data
       run: |
         python oil_prices_flow.py
-    - name: Commit files
+    - name: Commit and push files
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git commit --allow-empty -m "Auto-update of the data packages" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        git push
   deploy:
     needs: update
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
-        node-version: '8.x'
+        node-version: '20'
     - run: npm install -g data-cli
     - run: data --version
     - run: data push
