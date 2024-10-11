@@ -375,6 +375,5 @@
       "specType": "simple",
       "title": "Europe Brent Spot Price FOB (Dollars per Barrel)"
     }
-  ],
-  "collection": "stock-market-data"
+  ]
 }
