@@ -1,8 +1,8 @@
 {
-  "bytes": 442459,
-  "count_of_rows": 24659,
+  "bytes": 442709,
+  "count_of_rows": 24673,
   "descriptor": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "cf40a0d52560f7b30f1080e5f216aeca",
+  "hash": "607458760b60fe1fe6d3fdf67f030d0e",
   "keywords": [
     "Oil",
     "Brent",
@@ -22,7 +22,7 @@
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 173399,
+      "bytes": 173488,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -34,7 +34,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "0b1c5dfa6a521c2b01d86cd0412e935f",
+      "hash": "79376fcc7f1ca5c7754c5f557031ac1d",
       "name": "brent-daily",
       "path": "data/brent-daily.csv",
       "profile": "tabular-data-resource",
@@ -59,7 +59,7 @@
       }
     },
     {
-      "bytes": 35784,
+      "bytes": 35802,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -71,7 +71,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "85cb9c53361a11d9e6fe76ea07f9fc34",
+      "hash": "aea448cc60ae33f90305f7f6971af0af",
       "name": "brent-week",
       "path": "data/brent-weekly.csv",
       "profile": "tabular-data-resource",
@@ -96,7 +96,7 @@
       }
     },
     {
-      "bytes": 8245,
+      "bytes": 8263,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -108,7 +108,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "b242848603e040fe86db7d6312ffced1",
+      "hash": "b4051450285a9883b0af364d3b28ed6f",
       "name": "brent-month",
       "path": "data/brent-monthly.csv",
       "profile": "tabular-data-resource",
@@ -170,7 +170,7 @@
       }
     },
     {
-      "bytes": 178164,
+      "bytes": 178253,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -182,7 +182,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "50bda491e2f1eda9a3ce7d5b23d08640",
+      "hash": "b20d5ef43d43d6577e90c0bc628ac25d",
       "name": "wti-daily",
       "path": "data/wti-daily.csv",
       "profile": "tabular-data-resource",
@@ -207,7 +207,7 @@
       }
     },
     {
-      "bytes": 36962,
+      "bytes": 36980,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -219,7 +219,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "88bf2244e05468f3f066943e5e3e1561",
+      "hash": "c1763f9c429dea77482a9bb182e876c3",
       "name": "wti-week",
       "path": "data/wti-weekly.csv",
       "profile": "tabular-data-resource",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "bytes": 8497,
+      "bytes": 8515,
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -256,7 +256,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "38e9b2d66e0f127f4b0840b1370e1ad7",
+      "hash": "f6a394877b964a8597a6e2d0afa27a6e",
       "name": "wti-month",
       "path": "data/wti-monthly.csv",
       "profile": "tabular-data-resource",
