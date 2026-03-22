@@ -100,7 +100,7 @@ OIL_PRICES = Flow(
                 "name": "brent-price-history",
                 "title": "Brent Crude Oil Price (1987–present)",
                 "description": "Monthly Brent crude spot price in USD per barrel. Six major shocks stand out: the 1990 Gulf War spike, the 2008 financial crisis peak ($147), the 2014 OPEC supply glut collapse, the 2020 COVID demand crash, and the 2022 Russia-Ukraine war surge.",
-                "resources": ["brent-month"],
+                "resources": ["brent-week"],
                 "specType": "plot",
                 "spec": {
                     "dateFields": ["Date"],
@@ -135,17 +135,6 @@ OIL_PRICES = Flow(
                             "fill": "#6b7280", "fontSize": 10, "textAnchor": "start", "rotate": -45,
                         },
                     ],
-                },
-            },
-            {
-                "name": "graph",
-                "title": "Europe Brent Spot Price FOB (Dollars per Barrel)",
-                "resourceName": "brent-daily",
-                "specType": "simple",
-                "spec": {
-                    "type": "line",
-                    "group": "Date",
-                    "series": ["Price"],
                 },
             },
         ],

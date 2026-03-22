@@ -2,7 +2,7 @@
   "bytes": 450722,
   "count_of_rows": 25122,
   "descriptor": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "b674cc0124f8033d89ea3112a0124a59",
+  "hash": "26d97b764b499955da3ded8076db149a",
   "keywords": [
     "Oil",
     "Brent",
@@ -363,19 +363,30 @@
   "title": "Brent and WTI Spot Prices",
   "views": [
     {
-      "description": "Monthly Brent crude spot price in USD per barrel. Six major shocks stand out: the 1990 Gulf War spike, the 2008 financial crisis peak ($147), the 2014 OPEC supply glut collapse, the 2020 COVID demand crash, and the 2022 Russia-Ukraine war surge.",
       "name": "brent-price-history",
+      "title": "Brent Crude Oil Price (1987\u2013present)",
+      "description": "Weekly Brent crude spot price in USD per barrel. Six major shocks stand out: the 1990 Gulf War spike, the 2008 financial crisis peak ($147), the 2014 OPEC supply glut collapse, the 2020 COVID demand crash, and the 2022 Russia-Ukraine war surge.",
       "resources": [
-        "brent-month"
+        "brent-week"
       ],
+      "specType": "plot",
       "spec": {
         "dateFields": [
           "Date"
         ],
         "height": 400,
         "marginLeft": 60,
+        "x": {
+          "label": null
+        },
+        "y": {
+          "label": "Price (USD per barrel)",
+          "tickFormat": "$,.0f",
+          "grid": true
+        },
         "marks": [
           {
+            "type": "ruleX",
             "staticData": [
               {
                 "x": "1990-08-01"
@@ -393,81 +404,57 @@
                 "x": "2022-03-01"
               }
             ],
+            "x": "x",
             "stroke": "#e5e7eb",
-            "tip": false,
-            "type": "ruleX",
-            "x": "x"
+            "tip": false
           },
           {
-            "stroke": "#be123c",
-            "strokeWidth": 1.5,
-            "tip": true,
             "type": "line",
             "x": "Date",
-            "y": "Price"
+            "y": "Price",
+            "stroke": "#be123c",
+            "strokeWidth": 1.5,
+            "tip": true
           },
           {
-            "fill": "#6b7280",
-            "fontSize": 10,
-            "rotate": -45,
+            "type": "text",
             "staticData": [
               {
-                "label": "Gulf War",
                 "x": "1990-08-01",
-                "y": 130
+                "y": 130,
+                "label": "Gulf War"
               },
               {
-                "label": "$147 peak",
                 "x": "2008-07-01",
-                "y": 130
+                "y": 130,
+                "label": "$147 peak"
               },
               {
-                "label": "OPEC glut",
                 "x": "2014-11-01",
-                "y": 130
+                "y": 130,
+                "label": "OPEC glut"
               },
               {
-                "label": "COVID",
                 "x": "2020-04-01",
-                "y": 130
+                "y": 130,
+                "label": "COVID"
               },
               {
-                "label": "Russia-Ukraine",
                 "x": "2022-03-01",
-                "y": 130
+                "y": 130,
+                "label": "Russia-Ukraine"
               }
             ],
-            "text": "label",
-            "textAnchor": "start",
-            "type": "text",
             "x": "x",
-            "y": "y"
+            "y": "y",
+            "text": "label",
+            "fill": "#6b7280",
+            "fontSize": 10,
+            "textAnchor": "start",
+            "rotate": -45
           }
-        ],
-        "x": {
-          "label": null
-        },
-        "y": {
-          "grid": true,
-          "label": "Price (USD per barrel)",
-          "tickFormat": "$,.0f"
-        }
-      },
-      "specType": "plot",
-      "title": "Brent Crude Oil Price (1987–present)"
-    },
-    {
-      "name": "graph",
-      "resourceName": "brent-daily",
-      "spec": {
-        "group": "Date",
-        "series": [
-          "Price"
-        ],
-        "type": "line"
-      },
-      "specType": "simple",
-      "title": "Europe Brent Spot Price FOB (Dollars per Barrel)"
+        ]
+      }
     }
   ]
 }
