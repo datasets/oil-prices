@@ -97,6 +97,47 @@ OIL_PRICES = Flow(
         keywords=["Oil", "Brent", "WTI", "Oil Prices", "eia", "oil eia"],
         views=[
             {
+                "name": "brent-price-history",
+                "title": "Brent Crude Oil Price (1987–present)",
+                "description": "Monthly Brent crude spot price in USD per barrel. Six major shocks stand out: the 1990 Gulf War spike, the 2008 financial crisis peak ($147), the 2014 OPEC supply glut collapse, the 2020 COVID demand crash, and the 2022 Russia-Ukraine war surge.",
+                "resources": ["brent-month"],
+                "specType": "plot",
+                "spec": {
+                    "dateFields": ["Date"],
+                    "height": 400,
+                    "marginLeft": 60,
+                    "x": {"label": None},
+                    "y": {"label": "Price (USD per barrel)", "tickFormat": "$,.0f", "grid": True},
+                    "marks": [
+                        {
+                            "type": "ruleX",
+                            "staticData": [
+                                {"x": "1990-08-01"}, {"x": "2008-07-01"},
+                                {"x": "2014-11-01"}, {"x": "2020-04-01"}, {"x": "2022-03-01"},
+                            ],
+                            "x": "x", "stroke": "#e5e7eb", "tip": False,
+                        },
+                        {
+                            "type": "line",
+                            "x": "Date", "y": "Price",
+                            "stroke": "#be123c", "strokeWidth": 1.5, "tip": True,
+                        },
+                        {
+                            "type": "text",
+                            "staticData": [
+                                {"x": "1990-08-01", "y": 130, "label": "Gulf War"},
+                                {"x": "2008-07-01", "y": 130, "label": "$147 peak"},
+                                {"x": "2014-11-01", "y": 130, "label": "OPEC glut"},
+                                {"x": "2020-04-01", "y": 130, "label": "COVID"},
+                                {"x": "2022-03-01", "y": 130, "label": "Russia-Ukraine"},
+                            ],
+                            "x": "x", "y": "y", "text": "label",
+                            "fill": "#6b7280", "fontSize": 10, "textAnchor": "start", "rotate": -45,
+                        },
+                    ],
+                },
+            },
+            {
                 "name": "graph",
                 "title": "Europe Brent Spot Price FOB (Dollars per Barrel)",
                 "resourceName": "brent-daily",
@@ -106,7 +147,7 @@ OIL_PRICES = Flow(
                     "group": "Date",
                     "series": ["Price"],
                 },
-            }
+            },
         ],
     ),
     load(
