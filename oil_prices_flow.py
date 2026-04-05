@@ -6,7 +6,7 @@ from dataflows import (
 from dataflows import add_metadata, dump_to_path, load, set_type, printer
 
 
-def rename_resources(package: PackageWrapper):
+def rename_resources(package: PackageWrapper) -> None:
     package.pkg.descriptor["resources"][0]["name"] = "brent-daily"
     package.pkg.descriptor["resources"][0]["path"] = "data/brent-daily.csv"
     package.pkg.descriptor["resources"][1]["name"] = "brent-week"
@@ -31,7 +31,7 @@ def rename_resources(package: PackageWrapper):
     yield from package
 
 
-def filter_out_empty_rows(rows):
+def filter_out_empty_rows(rows) -> None:
     for row in rows:
         if row["Date"]:
             yield row
