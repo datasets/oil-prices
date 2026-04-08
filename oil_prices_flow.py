@@ -99,7 +99,7 @@ OIL_PRICES = Flow(
             {
                 "name": "brent-price-history",
                 "title": "Brent Crude Oil Price (1987–present)",
-                "description": "Monthly Brent crude spot price in USD per barrel. Six major shocks stand out: the 1990 Gulf War spike, the 2008 financial crisis peak ($147), the 2014 OPEC supply glut collapse, the 2020 COVID demand crash, and the 2022 Russia-Ukraine war surge.",
+                "description": "Weekly Brent crude spot price in USD per barrel. Major shocks stand out: the 1990 Gulf War spike, the 2008 financial crisis peak ($147), the 2014 OPEC supply glut collapse, the 2020 COVID demand crash, the 2022 Russia-Ukraine war surge, and the 2026 Iran war spike.",
                 "resources": ["brent-week"],
                 "specType": "plot",
                 "spec": {
@@ -114,6 +114,7 @@ OIL_PRICES = Flow(
                             "staticData": [
                                 {"x": "1990-08-01"}, {"x": "2008-07-01"},
                                 {"x": "2014-11-01"}, {"x": "2020-04-01"}, {"x": "2022-03-01"},
+                                {"x": "2026-02-28"},
                             ],
                             "x": "x", "stroke": "#e5e7eb", "tip": False,
                         },
@@ -130,6 +131,7 @@ OIL_PRICES = Flow(
                                 {"x": "2014-11-01", "y": 130, "label": "OPEC glut"},
                                 {"x": "2020-04-01", "y": 130, "label": "COVID"},
                                 {"x": "2022-03-01", "y": 130, "label": "Russia-Ukraine"},
+                                {"x": "2026-02-28", "y": 130, "label": "Iran war"},
                             ],
                             "x": "x", "y": "y", "text": "label",
                             "fill": "#6b7280", "fontSize": 10, "textAnchor": "start", "rotate": -45,
