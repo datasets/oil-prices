@@ -56,7 +56,8 @@
         "missingValues": [
           ""
         ]
-      }
+      },
+      "description": "Daily Europe Brent crude oil spot prices in USD per barrel, sourced from the U.S. Energy Information Administration (EIA)."
     },
     {
       "bytes": 36575,
@@ -93,7 +94,8 @@
         "missingValues": [
           ""
         ]
-      }
+      },
+      "description": "Weekly Europe Brent crude oil spot prices in USD per barrel, sourced from the U.S. Energy Information Administration (EIA)."
     },
     {
       "bytes": 8424,
@@ -130,7 +132,8 @@
         "missingValues": [
           ""
         ]
-      }
+      },
+      "description": "Monthly average Europe Brent crude oil spot prices in USD per barrel, sourced from the U.S. Energy Information Administration (EIA)."
     },
     {
       "bytes": 716,
@@ -167,7 +170,8 @@
         "missingValues": [
           ""
         ]
-      }
+      },
+      "description": "Annual average Europe Brent crude oil spot prices in USD per barrel, sourced from the U.S. Energy Information Administration (EIA)."
     },
     {
       "bytes": 181925,
@@ -204,7 +208,8 @@
         "missingValues": [
           ""
         ]
-      }
+      },
+      "description": "Daily WTI (West Texas Intermediate) Cushing, Oklahoma crude oil spot prices in USD per barrel, sourced from the U.S. Energy Information Administration (EIA)."
     },
     {
       "bytes": 37749,
@@ -241,7 +246,8 @@
         "missingValues": [
           ""
         ]
-      }
+      },
+      "description": "Weekly WTI (West Texas Intermediate) Cushing, Oklahoma crude oil spot prices in USD per barrel, sourced from the U.S. Energy Information Administration (EIA)."
     },
     {
       "bytes": 8677,
@@ -278,7 +284,8 @@
         "missingValues": [
           ""
         ]
-      }
+      },
+      "description": "Monthly average WTI (West Texas Intermediate) Cushing, Oklahoma crude oil spot prices in USD per barrel, sourced from the U.S. Energy Information Administration (EIA)."
     },
     {
       "bytes": 728,
@@ -315,7 +322,8 @@
         "missingValues": [
           ""
         ]
-      }
+      },
+      "description": "Annual average WTI (West Texas Intermediate) Cushing, Oklahoma crude oil spot prices in USD per barrel, sourced from the U.S. Energy Information Administration (EIA)."
     }
   ],
   "sources": [
@@ -462,7 +470,7 @@
         }
       },
       "specType": "plot",
-      "title": "Brent Crude Oil Price (1987–present)"
+      "title": "Brent Crude Oil Price (1987\u2013present)"
     }
   ]
 }
