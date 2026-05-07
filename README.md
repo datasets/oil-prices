@@ -7,7 +7,16 @@ Europe Brent and WTI (Western Texas Intermediate) Spot Prices (Annual/ Monthly/ 
 This series is available through the EIA open data API
 
 - [Europe Brent Spot Price FOB (Dollars per Barrel)](https://www.eia.gov/dnav/pet/hist/RBRTEd.htm) - From 20 May 1987 till today
-- [Cushing, OK WTI Spot Price FOB (Dollars per Barrel)](https://www.eia.gov/dnav/pet/hist/RWTCD.htm) - From 01 February 1986 till today
+- [Cushing, OK WTI Spot Price FOB (Dollars per Barrel)](https://www.eia.gov/dnav/pet/hist/RWTCD.htm) - From 02 January 1986 till today
+
+### Date conventions
+
+The date field follows different conventions depending on granularity:
+
+- **Daily**: the exact observation date.
+- **Weekly**: the Friday ending the week.
+- **Monthly**: the 15th of the month (e.g. `1987-05-15` represents the May 1987 average).
+- **Annual**: June 30 of the year (e.g. `1987-06-30` represents the 1987 annual average).
 
 ### Definitions
 

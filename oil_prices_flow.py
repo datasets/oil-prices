@@ -6,23 +6,23 @@ from dataflows import (
 from dataflows import add_metadata, dump_to_path, load, set_type, printer
 
 
+_RESOURCE_META = [
+    ("brent-daily",   "data/brent-daily.csv",   "Europe Brent crude oil spot price, daily observations, in USD per barrel (FOB). Data start: May 1987."),
+    ("brent-week",    "data/brent-weekly.csv",   "Europe Brent crude oil spot price, weekly averages, in USD per barrel (FOB). The Date is the Friday ending each week. Data start: May 1987."),
+    ("brent-month",   "data/brent-monthly.csv",  "Europe Brent crude oil spot price, monthly averages, in USD per barrel (FOB). The Date is reported as the 15th of each month. Data start: May 1987."),
+    ("brent-year",    "data/brent-year.csv",     "Europe Brent crude oil spot price, annual averages, in USD per barrel (FOB). The Date is reported as June 30 of each year. Data start: 1987."),
+    ("wti-daily",     "data/wti-daily.csv",      "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, daily observations, in USD per barrel (FOB). Data start: January 1986."),
+    ("wti-week",      "data/wti-weekly.csv",     "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, weekly averages, in USD per barrel (FOB). The Date is the Friday ending each week. Data start: January 1986."),
+    ("wti-month",     "data/wti-monthly.csv",    "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, monthly averages, in USD per barrel (FOB). The Date is reported as the 15th of each month. Data start: January 1986."),
+    ("wti-year",      "data/wti-year.csv",       "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, annual averages, in USD per barrel (FOB). The Date is reported as June 30 of each year. Data start: 1986."),
+]
+
+
 def rename_resources(package: PackageWrapper):
-    package.pkg.descriptor["resources"][0]["name"] = "brent-daily"
-    package.pkg.descriptor["resources"][0]["path"] = "data/brent-daily.csv"
-    package.pkg.descriptor["resources"][1]["name"] = "brent-week"
-    package.pkg.descriptor["resources"][1]["path"] = "data/brent-weekly.csv"
-    package.pkg.descriptor["resources"][2]["name"] = "brent-month"
-    package.pkg.descriptor["resources"][2]["path"] = "data/brent-monthly.csv"
-    package.pkg.descriptor["resources"][3]["name"] = "brent-year"
-    package.pkg.descriptor["resources"][3]["path"] = "data/brent-year.csv"
-    package.pkg.descriptor["resources"][4]["name"] = "wti-daily"
-    package.pkg.descriptor["resources"][4]["path"] = "data/wti-daily.csv"
-    package.pkg.descriptor["resources"][5]["name"] = "wti-week"
-    package.pkg.descriptor["resources"][5]["path"] = "data/wti-weekly.csv"
-    package.pkg.descriptor["resources"][6]["name"] = "wti-month"
-    package.pkg.descriptor["resources"][6]["path"] = "data/wti-monthly.csv"
-    package.pkg.descriptor["resources"][7]["name"] = "wti-year"
-    package.pkg.descriptor["resources"][7]["path"] = "data/wti-year.csv"
+    for i, (name, path, description) in enumerate(_RESOURCE_META):
+        package.pkg.descriptor["resources"][i]["name"] = name
+        package.pkg.descriptor["resources"][i]["path"] = path
+        package.pkg.descriptor["resources"][i]["description"] = description
 
     yield package.pkg
     res_iter = iter(package)
@@ -41,7 +41,7 @@ OIL_PRICES = Flow(
     add_metadata(
         name="oil-prices",
         title="Brent and WTI Spot Prices",
-        descriptor=(
+        description=(
             "A variety of temporal granularities for Europe Brent and WTI "
             "(West Texas Intermediate) Spot Prices."
         ),
@@ -198,7 +198,16 @@ OIL_PRICES = Flow(
         headers=["Date", "Price"],
     ),
     rename_resources,
-    set_type("Date", resources=None, type="date", format="any"),
+    set_type("Date", resources=["brent-daily", "wti-daily"], type="date", format="any",
+             description="Observation date in YYYY-MM-DD format."),
+    set_type("Date", resources=["brent-week", "wti-week"], type="date", format="any",
+             description="End-of-week date (Friday) in YYYY-MM-DD format."),
+    set_type("Date", resources=["brent-month", "wti-month"], type="date", format="any",
+             description="Reported as the 15th of the month in YYYY-MM-DD format; represents the monthly average period."),
+    set_type("Date", resources=["brent-year", "wti-year"], type="date", format="any",
+             description="Reported as June 30 of the year in YYYY-MM-DD format; represents the annual average period."),
+    set_type("Price", resources=None, type="number",
+             description="Spot price in US dollars per barrel (FOB)."),
     validate(),
     printer(),
     filter_out_empty_rows,
