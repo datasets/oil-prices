@@ -50,7 +50,6 @@
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
-            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -90,7 +89,6 @@
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
-            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -130,7 +128,6 @@
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
-            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -170,7 +167,6 @@
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
-            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -210,7 +206,6 @@
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
-            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -250,7 +245,6 @@
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
-            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -290,7 +284,6 @@
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
-            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -330,7 +323,6 @@
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
-            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
