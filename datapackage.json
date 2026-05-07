@@ -43,7 +43,7 @@
         "fields": [
           {
             "description": "Observation date in YYYY-MM-DD format.",
-            "format": "%Y-%m-%d",
+            "format": "default",
             "name": "Date",
             "type": "date"
           },
@@ -83,7 +83,7 @@
         "fields": [
           {
             "description": "End-of-week date (Friday) in YYYY-MM-DD format.",
-            "format": "%Y-%m-%d",
+            "format": "default",
             "name": "Date",
             "type": "date"
           },
@@ -123,7 +123,7 @@
         "fields": [
           {
             "description": "Reported as the 15th of the month in YYYY-MM-DD format; represents the monthly average period.",
-            "format": "%Y-%m-%d",
+            "format": "default",
             "name": "Date",
             "type": "date"
           },
@@ -163,7 +163,7 @@
         "fields": [
           {
             "description": "Reported as June 30 of the year in YYYY-MM-DD format; represents the annual average period.",
-            "format": "%Y-%m-%d",
+            "format": "default",
             "name": "Date",
             "type": "date"
           },
@@ -203,7 +203,7 @@
         "fields": [
           {
             "description": "Observation date in YYYY-MM-DD format.",
-            "format": "%Y-%m-%d",
+            "format": "default",
             "name": "Date",
             "type": "date"
           },
@@ -243,7 +243,7 @@
         "fields": [
           {
             "description": "End-of-week date (Friday) in YYYY-MM-DD format.",
-            "format": "%Y-%m-%d",
+            "format": "default",
             "name": "Date",
             "type": "date"
           },
@@ -283,7 +283,7 @@
         "fields": [
           {
             "description": "Reported as the 15th of the month in YYYY-MM-DD format; represents the monthly average period.",
-            "format": "%Y-%m-%d",
+            "format": "default",
             "name": "Date",
             "type": "date"
           },
@@ -323,7 +323,7 @@
         "fields": [
           {
             "description": "Reported as June 30 of the year in YYYY-MM-DD format; represents the annual average period.",
-            "format": "%Y-%m-%d",
+            "format": "default",
             "name": "Date",
             "type": "date"
           },
