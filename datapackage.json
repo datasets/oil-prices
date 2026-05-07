@@ -2,7 +2,7 @@
   "bytes": 452288,
   "count_of_rows": 25206,
   "description": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "45ac0b9376108a8217f7a929b8e226c3",
+  "hash": "c0488d2332c2774ebc56c57334097cb1",
   "keywords": [
     "Oil",
     "Brent",
@@ -23,6 +23,7 @@
   "resources": [
     {
       "bytes": 177323,
+      "description": "Europe Brent crude oil spot price, daily observations, in USD per barrel (FOB). Data start: May 1987.",
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -35,7 +36,6 @@
       "encoding": "utf-8",
       "format": "csv",
       "hash": "620e6c32a2dbc410d9d8baae6df3d785",
-      "description": "Europe Brent crude oil spot price, daily observations, in USD per barrel (FOB). Data start: May 1987.",
       "name": "brent-daily",
       "path": "data/brent-daily.csv",
       "profile": "tabular-data-resource",
@@ -43,13 +43,14 @@
         "fields": [
           {
             "description": "Observation date in YYYY-MM-DD format.",
-            "format": "default",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
+            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -62,6 +63,7 @@
     },
     {
       "bytes": 36594,
+      "description": "Europe Brent crude oil spot price, weekly averages, in USD per barrel (FOB). The Date is the Friday ending each week. Data start: May 1987.",
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -74,7 +76,6 @@
       "encoding": "utf-8",
       "format": "csv",
       "hash": "df815abd0c2be53c9f8528cdd5e7c506",
-      "description": "Europe Brent crude oil spot price, weekly averages, in USD per barrel (FOB). The Date is the Friday ending each week. Data start: May 1987.",
       "name": "brent-week",
       "path": "data/brent-weekly.csv",
       "profile": "tabular-data-resource",
@@ -82,13 +83,14 @@
         "fields": [
           {
             "description": "End-of-week date (Friday) in YYYY-MM-DD format.",
-            "format": "default",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
+            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -101,6 +103,7 @@
     },
     {
       "bytes": 8443,
+      "description": "Europe Brent crude oil spot price, monthly averages, in USD per barrel (FOB). The Date is reported as the 15th of each month. Data start: May 1987.",
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -113,7 +116,6 @@
       "encoding": "utf-8",
       "format": "csv",
       "hash": "a83a941c663130ba1ed5f009d833902f",
-      "description": "Europe Brent crude oil spot price, monthly averages, in USD per barrel (FOB). The Date is reported as the 15th of each month. Data start: May 1987.",
       "name": "brent-month",
       "path": "data/brent-monthly.csv",
       "profile": "tabular-data-resource",
@@ -121,13 +123,14 @@
         "fields": [
           {
             "description": "Reported as the 15th of the month in YYYY-MM-DD format; represents the monthly average period.",
-            "format": "default",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
+            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -140,6 +143,7 @@
     },
     {
       "bytes": 716,
+      "description": "Europe Brent crude oil spot price, annual averages, in USD per barrel (FOB). The Date is reported as June 30 of each year. Data start: 1987.",
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -152,7 +156,6 @@
       "encoding": "utf-8",
       "format": "csv",
       "hash": "3cdadc507b688ea679c38d858985ff43",
-      "description": "Europe Brent crude oil spot price, annual averages, in USD per barrel (FOB). The Date is reported as June 30 of each year. Data start: 1987.",
       "name": "brent-year",
       "path": "data/brent-year.csv",
       "profile": "tabular-data-resource",
@@ -160,13 +163,14 @@
         "fields": [
           {
             "description": "Reported as June 30 of the year in YYYY-MM-DD format; represents the annual average period.",
-            "format": "default",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
+            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -179,6 +183,7 @@
     },
     {
       "bytes": 182020,
+      "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, daily observations, in USD per barrel (FOB). Data start: January 1986.",
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -191,7 +196,6 @@
       "encoding": "utf-8",
       "format": "csv",
       "hash": "59990fc3d5ceb39cd11ae5f43dc4f9d7",
-      "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, daily observations, in USD per barrel (FOB). Data start: January 1986.",
       "name": "wti-daily",
       "path": "data/wti-daily.csv",
       "profile": "tabular-data-resource",
@@ -199,13 +203,14 @@
         "fields": [
           {
             "description": "Observation date in YYYY-MM-DD format.",
-            "format": "default",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
+            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -218,6 +223,7 @@
     },
     {
       "bytes": 37768,
+      "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, weekly averages, in USD per barrel (FOB). The Date is the Friday ending each week. Data start: January 1986.",
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -230,7 +236,6 @@
       "encoding": "utf-8",
       "format": "csv",
       "hash": "8242e12e618104b625ea0d51a0bfe617",
-      "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, weekly averages, in USD per barrel (FOB). The Date is the Friday ending each week. Data start: January 1986.",
       "name": "wti-week",
       "path": "data/wti-weekly.csv",
       "profile": "tabular-data-resource",
@@ -238,13 +243,14 @@
         "fields": [
           {
             "description": "End-of-week date (Friday) in YYYY-MM-DD format.",
-            "format": "default",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
+            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -257,6 +263,7 @@
     },
     {
       "bytes": 8696,
+      "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, monthly averages, in USD per barrel (FOB). The Date is reported as the 15th of each month. Data start: January 1986.",
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -269,7 +276,6 @@
       "encoding": "utf-8",
       "format": "csv",
       "hash": "a32999c993a9fa161bebe38a07e28b2e",
-      "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, monthly averages, in USD per barrel (FOB). The Date is reported as the 15th of each month. Data start: January 1986.",
       "name": "wti-month",
       "path": "data/wti-monthly.csv",
       "profile": "tabular-data-resource",
@@ -277,13 +283,14 @@
         "fields": [
           {
             "description": "Reported as the 15th of the month in YYYY-MM-DD format; represents the monthly average period.",
-            "format": "default",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
+            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
@@ -296,6 +303,7 @@
     },
     {
       "bytes": 728,
+      "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, annual averages, in USD per barrel (FOB). The Date is reported as June 30 of each year. Data start: 1986.",
       "dialect": {
         "caseSensitiveHeader": false,
         "delimiter": ",",
@@ -308,7 +316,6 @@
       "encoding": "utf-8",
       "format": "csv",
       "hash": "75305003d10c9f6d5c2834c13316633b",
-      "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, annual averages, in USD per barrel (FOB). The Date is reported as June 30 of each year. Data start: 1986.",
       "name": "wti-year",
       "path": "data/wti-year.csv",
       "profile": "tabular-data-resource",
@@ -316,13 +323,14 @@
         "fields": [
           {
             "description": "Reported as June 30 of the year in YYYY-MM-DD format; represents the annual average period.",
-            "format": "default",
+            "format": "%Y-%m-%d",
             "name": "Date",
             "type": "date"
           },
           {
             "decimalChar": ".",
             "description": "Spot price in US dollars per barrel (FOB).",
+            "format": "default",
             "groupChar": "",
             "name": "Price",
             "type": "number"
