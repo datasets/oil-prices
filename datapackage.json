@@ -1,8 +1,8 @@
 {
-  "bytes": 454898,
-  "count_of_rows": 25350,
+  "bytes": 455149,
+  "count_of_rows": 25364,
   "description": "A variety of temporal granularities for Europe Brent and WTI (West Texas Intermediate) Spot Prices.",
-  "hash": "b5e7c47e7aefc29ffcf1a43712953015",
+  "hash": "5dc10ed20abacd941f1fe2f3f2372725",
   "keywords": [
     "Oil",
     "Brent",
@@ -22,7 +22,7 @@
   "profile": "data-package",
   "resources": [
     {
-      "bytes": 178399,
+      "bytes": 178488,
       "description": "Europe Brent crude oil spot price, daily observations, in USD per barrel (FOB). Data start: May 1987.",
       "dialect": {
         "caseSensitiveHeader": false,
@@ -35,7 +35,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "2a6e3afe0b983829b733af6a1ac87b1e",
+      "hash": "51c53ab621ceb6a5048890e2d5da57c2",
       "name": "brent-daily",
       "path": "data/brent-daily.csv",
       "profile": "tabular-data-resource",
@@ -62,7 +62,7 @@
       }
     },
     {
-      "bytes": 36809,
+      "bytes": 36827,
       "description": "Europe Brent crude oil spot price, weekly averages, in USD per barrel (FOB). The Date is the Friday ending each week. Data start: May 1987.",
       "dialect": {
         "caseSensitiveHeader": false,
@@ -75,7 +75,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "97a5ae42aa30654db82831746db08645",
+      "hash": "ba3043136b2933f40419a599b2831310",
       "name": "brent-week",
       "path": "data/brent-weekly.csv",
       "profile": "tabular-data-resource",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "bytes": 8479,
+      "bytes": 8497,
       "description": "Europe Brent crude oil spot price, monthly averages, in USD per barrel (FOB). The Date is reported as the 15th of each month. Data start: May 1987.",
       "dialect": {
         "caseSensitiveHeader": false,
@@ -115,7 +115,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "84b4f5a09a792e489bccff4fe6b35f30",
+      "hash": "a68e2b992340c2321923798e5749cf3f",
       "name": "brent-month",
       "path": "data/brent-monthly.csv",
       "profile": "tabular-data-resource",
@@ -182,7 +182,7 @@
       }
     },
     {
-      "bytes": 183048,
+      "bytes": 183138,
       "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, daily observations, in USD per barrel (FOB). Data start: January 1986.",
       "dialect": {
         "caseSensitiveHeader": false,
@@ -195,7 +195,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "a352f2e8b8a803c48c78ac8823beebb3",
+      "hash": "14cf97057291078eb8bd982b7d5ddd0a",
       "name": "wti-daily",
       "path": "data/wti-daily.csv",
       "profile": "tabular-data-resource",
@@ -222,7 +222,7 @@
       }
     },
     {
-      "bytes": 37986,
+      "bytes": 38004,
       "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, weekly averages, in USD per barrel (FOB). The Date is the Friday ending each week. Data start: January 1986.",
       "dialect": {
         "caseSensitiveHeader": false,
@@ -235,7 +235,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "1b9246a4d7b4d500c32ee83301ada7ee",
+      "hash": "066f1a8708ed84f9e092adadfe70f8ab",
       "name": "wti-week",
       "path": "data/wti-weekly.csv",
       "profile": "tabular-data-resource",
@@ -262,7 +262,7 @@
       }
     },
     {
-      "bytes": 8733,
+      "bytes": 8751,
       "description": "WTI (West Texas Intermediate) crude oil spot price at Cushing, OK, monthly averages, in USD per barrel (FOB). The Date is reported as the 15th of each month. Data start: January 1986.",
       "dialect": {
         "caseSensitiveHeader": false,
@@ -275,7 +275,7 @@
       },
       "encoding": "utf-8",
       "format": "csv",
-      "hash": "9f6bd236e47d719e68c347752d284c2a",
+      "hash": "9bc0d52e37f021c7b64d6cd929419721",
       "name": "wti-month",
       "path": "data/wti-monthly.csv",
       "profile": "tabular-data-resource",
